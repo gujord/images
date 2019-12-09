@@ -25,10 +25,10 @@ write "Checking out and updating sources FreeBSD: ${FREEBSD_VERSION}"
 svnlite co svn://svn.freebsd.org/base/stable/${FREEBSD_VERSION} /usr/src
 
 write "Fetching src.conf, src-jail.conf, make.conf, fabrik.kernel"
-fetch --no-verify-peer -a https://raw.githubusercontent.com/fabrik-red/images/master/src.conf -o /etc/fabrik-src.conf
-fetch --no-verify-peer -a https://raw.githubusercontent.com/fabrik-red/images/master/src-jail.conf -o /etc/src-jail.conf
-fetch --no-verify-peer -a https://raw.githubusercontent.com/fabrik-red/images/master/make.conf -o /etc/fabrik-make.conf
-fetch --no-verify-peer -a https://raw.githubusercontent.com/fabrik-red/images/master/fabrik.kernel -o /usr/src/sys/amd64/conf/FABRIK
+fetch --no-verify-peer -a https://raw.githubusercontent.com/gujord/images/master/src.conf -o /etc/fabrik-src.conf
+fetch --no-verify-peer -a https://raw.githubusercontent.com/gujord/images/master/src-jail.conf -o /etc/src-jail.conf
+fetch --no-verify-peer -a https://raw.githubusercontent.com/gujord/images/master/make.conf -o /etc/fabrik-make.conf
+fetch --no-verify-peer -a https://raw.githubusercontent.com/gujord/images/master/fabrik.kernel -o /usr/src/sys/amd64/conf/FABRIK
 
 write "Creating /fabrik dir"
 mkdir -p /fabrik/host
